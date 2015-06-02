@@ -32,6 +32,7 @@ monokai@0.14.0
 monokai-seti@0.7.0
 open-recent@2.2.4
 pane-split-moves-tab@0.0.1
+php-twig@3.0.0
 pigments@0.4.1
 project-manager@1.15.7
 revert-buffer@0.5.0
