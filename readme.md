@@ -11,6 +11,7 @@ Then `git clone` this repository into `~/.atom` or wherever your Atom configurat
 Example:
 
 ```bash
+$ cd ~
 $ git clone git://github.com/jaromero/atom-config.git .atom
 ```
 
