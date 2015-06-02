@@ -1,0 +1,124 @@
+"*":
+  "exception-reporting":
+    userId: "39b24e7e-91ae-8dea-5a76-598883ed3eec"
+  welcome:
+    showOnStartup: false
+  metrics: false
+  editor:
+    showIndentGuide: true
+    softWrap: true
+    scrollPastEnd: true
+    invisibles:
+      {}
+    useHardwareAcceleration: true
+    softWrapHangingIndent: 4
+    fontFamily: "Input"
+    fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
+    fontSize: 15
+  core:
+    disabledPackages: [
+      "spell-check"
+      "minimap"
+      "welcome"
+      "atom-resizable-panes"
+      "fonts"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_STORE"
+      "Thumbs.db"
+      "node_modules"
+      ".sass-cache"
+      ".tmp"
+    ]
+    autoHideMenuBar: true
+    projectHome: "/home/nsdragon/Development"
+  "git-diff":
+    showIconsInEditorGutter: true
+  "recent-files":
+    updated: false
+  emmet:
+    {}
+  "open-recent":
+    maxRecentDirectories: 10
+    maxRecentFiles: 10
+  minimap:
+    plugins:
+      "color-highlight": true
+  "atom-alignment":
+    addSpacePostfix: true
+  "atom-color-highlight":
+    {}
+  "project-palette-finder":
+    {}
+  "autocomplete-plus":
+    suggestionListFollows: "Word"
+    backspaceTriggersAutocomplete: false
+    confirmCompletion: "tab"
+    enableBuiltinProvider: false
+  aligner:
+    ":":
+      alignment: "left"
+      leftSpace: false
+  "unity-ui":
+    showIcons: true
+    colorStatusIndicatorsInTreeView: true
+  "isotope-ui":
+    customBackgroundColorPicker:
+      red: 45
+      green: 45
+      blue: 45
+      alpha: 1
+    lowContrastTooltip: true
+    backgroundColor: "false"
+    fontFamily: "System Default"
+    fontWeight: "Regular"
+    customBackgroundColor: true
+  tabs:
+    {}
+  "aligner-css":
+    {}
+  "coffee-compile":
+    {}
+  "aligner-scss":
+    {}
+  "isotope-light-ui":
+    fontWeight: "Regular"
+    fontFamily: "System Default"
+    customBackgroundColor: "false"
+    lowContrastTooltip: true
+  pigments:
+    ignoredNames: [
+      ".atom/packages/*"
+    ]
+  "atom-beautify":
+    {}
+  "one-dark-ui":
+    {}
+  "file-icons":
+    onChanges: true
+  fonts:
+    fontFamily: "Fira Mono"
+  "fuzzy-finder":
+    {}
+  "markdown-preview":
+    {}
+  "status-bar":
+    {}
+  linter:
+    statusBar: "Show error of the selected line"
+    lintOnChange: false
+    lintOnEditorFocus: false
+    lintOnSave: false
+  "linter-jscs":
+    preset: "crockford"
+    onlyConfig: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  docblockr:
+    {}
+".jade.source":
+  editor:
+    softWrapHangingIndent: 4
