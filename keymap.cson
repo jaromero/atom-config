@@ -24,6 +24,8 @@
 'body':
   'ctrl-pagedown': 'pane:show-next-item'
   'ctrl-pageup': 'pane:show-previous-item'
+  'ctrl-s': 'core:save'
+  'ctrl-alt-s': 'user:save-all-modified'
 
 'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-shift-up': 'editor:move-line-up'
@@ -37,6 +39,7 @@
   'ctrl-alt-/': 'aligner:align'
   'ctrl-shift-l': 'editor:split-selections-into-lines'
   'ctrl-alt-l': 'grammar-selector:show'
+  'ctrl-alt-c': 'unset!'
 
 'atom-text-editor.autocomplete-active:not([mini])':
   'tab': 'autocomplete-plus:confirm'

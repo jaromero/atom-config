@@ -8,12 +8,12 @@
     showIndentGuide: true
     softWrap: true
     scrollPastEnd: true
-    invisibles:
-      {}
+    invisibles: {}
     useHardwareAcceleration: true
     softWrapHangingIndent: 4
     fontFamily: "Input"
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
+    showInvisibles: true
     fontSize: 15
   core:
     disabledPackages: [
@@ -22,6 +22,8 @@
       "welcome"
       "atom-resizable-panes"
       "fonts"
+      "Sublime-Style-Column-Selection"
+      "atom-save-all"
     ]
     ignoredNames: [
       ".git"
@@ -39,8 +41,7 @@
     showIconsInEditorGutter: true
   "recent-files":
     updated: false
-  emmet:
-    {}
+  emmet: {}
   "open-recent":
     maxRecentDirectories: 10
     maxRecentFiles: 10
@@ -49,10 +50,8 @@
       "color-highlight": true
   "atom-alignment":
     addSpacePostfix: true
-  "atom-color-highlight":
-    {}
-  "project-palette-finder":
-    {}
+  "atom-color-highlight": {}
+  "project-palette-finder": {}
   "autocomplete-plus":
     suggestionListFollows: "Word"
     backspaceTriggersAutocomplete: false
@@ -77,13 +76,10 @@
     fontWeight: "Regular"
     customBackgroundColor: true
   tabs:
-    {}
-  "aligner-css":
-    {}
-  "coffee-compile":
-    {}
-  "aligner-scss":
-    {}
+    usePreviewTabs: true
+  "aligner-css": {}
+  "coffee-compile": {}
+  "aligner-scss": {}
   "isotope-light-ui":
     fontWeight: "Regular"
     fontFamily: "System Default"
@@ -93,20 +89,16 @@
     ignoredNames: [
       ".atom/packages/*"
     ]
-  "atom-beautify":
-    {}
-  "one-dark-ui":
-    {}
+    markerType: "outline"
+  "atom-beautify": {}
+  "one-dark-ui": {}
   "file-icons":
     onChanges: true
   fonts:
     fontFamily: "Fira Mono"
-  "fuzzy-finder":
-    {}
-  "markdown-preview":
-    {}
-  "status-bar":
-    {}
+  "fuzzy-finder": {}
+  "markdown-preview": {}
+  "status-bar": {}
   linter:
     statusBar: "Show error of the selected line"
     lintOnChange: false
@@ -117,8 +109,9 @@
     onlyConfig: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
-  docblockr:
-    {}
+  docblockr: {}
+  "atom-fuzzy-grep": {}
+  "git-blame": {}
 ".jade.source":
   editor:
     softWrapHangingIndent: 4

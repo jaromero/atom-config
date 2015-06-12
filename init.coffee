@@ -13,4 +13,11 @@
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
 
-atom.config.set 'editor.fontSize', 15
+# atom.config.set 'editor.fontSize', 15
+
+# Custom Save All Modified comman
+atom.commands.add 'atom-text-editor',
+  'user:save-all-modified': ->
+    for paneItem in atom.workspace.getPaneItems()
+      if paneItem.getURI?()? and paneItem.isModified?()
+        paneItem.save()
