@@ -9,6 +9,7 @@
  */
 
 @base-font-size: 11px;
+@ui-font-family: "Roboto";
 
 html, body {
   // Base font override
@@ -17,11 +18,11 @@ html, body {
 
 .platform-linux atom-workspace {
   // Fix fonts too thin in Linux
-  -webkit-text-stroke-width: 0.2px !important;
+  -webkit-text-stroke-width: 0.4px !important;
 
   // Font overrides
   font-size: @base-font-size;
-  font-family: "Roboto";
+  font-family: @ui-font-family;
 
   background-tips ul li .keystroke {
     font-family: inherit;
@@ -30,6 +31,10 @@ html, body {
   .tree-view {
     font-size: @base-font-size;
   }
+}
+
+.tooltip {
+  font-family: @ui-font-family;
 }
 
 atom-text-editor::shadow {
@@ -51,28 +56,6 @@ atom-pane .tab-bar .tab .title[data-path]::before {
   vertical-align: middle;
 }
 
-// @tree-item-height: 20px;
-
-// .list-group li:not(.list-nested-item),
-// .list-tree  li:not(.list-nested-item),
-// .list-group li.list-nested-item > .list-item,
-// .list-tree  li.list-nested-item > .list-item {
-//     line-height: @tree-item-height;
-// }
-//
-// .list-group .selected:before,
-// .list-tree .selected:before {
-//     height: @tree-item-height;
-// }
-// .list-group .icon,
-// .list-tree .icon {
-//   &, &:before {
-//     height: @tree-item-height;
-//     line-height: @tree-item-height;
-//   }
-// }
-
-
 // Isotope UI customization
 .platform-linux atom-workspace.theme-isotope-ui {
   border-top: none;
@@ -81,39 +64,4 @@ atom-pane .tab-bar .tab .title[data-path]::before {
 // One Dark UI customization
 .theme-one-dark-ui {
   font-size: 10px;
-}
-
-// Seti theme customization
-@seti-ui-theme-tabbar-height: 30px;
-
-.theme-seti-ui {
-    tabs-bar, .tab-bar {
-
-        height: @seti-ui-theme-tabbar-height;
-
-        tabs-tab, .tab {
-            height: @seti-ui-theme-tabbar-height;
-            line-height: @seti-ui-theme-tabbar-height;
-
-            &:before,
-            &.active,
-            &.active:before {
-                height: @seti-ui-theme-tabbar-height;
-                line-height: @seti-ui-theme-tabbar-height;
-            }
-
-            &.active .title {
-                margin-top: -2px;
-            }
-
-            .close-icon,
-            &.active .close-icon {
-                line-height: @seti-ui-theme-tabbar-height + 2;
-            }
-
-            &.modified:not(:hover) .close-icon {
-                top: 14px;
-            }
-        }
-    }
 }

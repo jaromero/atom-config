@@ -11,19 +11,19 @@
     invisibles: {}
     useHardwareAcceleration: true
     softWrapHangingIndent: 4
-    fontFamily: "Input"
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    showInvisibles: true
-    fontSize: 15
+    fontFamily: "Input"
+    lineHeight: 1.3
   core:
     disabledPackages: [
       "spell-check"
-      "minimap"
       "welcome"
       "atom-resizable-panes"
       "fonts"
       "Sublime-Style-Column-Selection"
       "atom-save-all"
+      "php-twig"
+      "linter"
     ]
     ignoredNames: [
       ".git"
@@ -37,6 +37,10 @@
     ]
     autoHideMenuBar: true
     projectHome: "/home/nsdragon/Development"
+    themes: [
+      "one-dark-ui"
+      "seti-syntax"
+    ]
   "git-diff":
     showIconsInEditorGutter: true
   "recent-files":
@@ -48,6 +52,11 @@
   minimap:
     plugins:
       "color-highlight": true
+      linter: true
+      bookmarks: true
+      selection: true
+      "highlight-selected": true
+      "git-diff": true
   "atom-alignment":
     addSpacePostfix: true
   "atom-color-highlight": {}
@@ -70,11 +79,11 @@
       green: 45
       blue: 45
       alpha: 1
-    lowContrastTooltip: true
     backgroundColor: "false"
-    fontFamily: "System Default"
+    fontFamily: "Roboto"
     fontWeight: "Regular"
-    customBackgroundColor: true
+    backgroundImage: true
+    backgroundImagePath: "/home/nsdragon/Pictures/Wallpapers/wallbase/wallpaper_185596078.png"
   tabs:
     usePreviewTabs: true
   "aligner-css": {}
@@ -89,7 +98,6 @@
     ignoredNames: [
       ".atom/packages/*"
     ]
-    markerType: "outline"
   "atom-beautify": {}
   "one-dark-ui": {}
   "file-icons":
@@ -104,6 +112,7 @@
     lintOnChange: false
     lintOnEditorFocus: false
     lintOnSave: false
+    lintOnFly: false
   "linter-jscs":
     preset: "crockford"
     onlyConfig: true
