@@ -29,6 +29,8 @@ packages: [
   "linter-coffeelint"
   "linter-jscs"
   "linter-jshint"
+  "markdown-writer"
+  "merge-conflicts"
   "minimap"
   "minimap-bookmarks"
   "minimap-color-highlight"

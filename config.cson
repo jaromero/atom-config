@@ -12,8 +12,10 @@
     useHardwareAcceleration: true
     softWrapHangingIndent: 4
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    fontFamily: "Input"
     lineHeight: 1.3
+    fontFamily: "Input"
+    softWrapAtPreferredLineLength: true
+    showInvisibles: true
   core:
     disabledPackages: [
       "spell-check"
@@ -105,7 +107,8 @@
   fonts:
     fontFamily: "Fira Mono"
   "fuzzy-finder": {}
-  "markdown-preview": {}
+  "markdown-preview":
+    useGitHubStyle: true
   "status-bar": {}
   linter:
     statusBar: "Show error of the selected line"
@@ -114,13 +117,12 @@
     lintOnSave: false
     lintOnFly: false
   "linter-jscs":
-    preset: "crockford"
+    preset: "google"
     onlyConfig: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   docblockr: {}
   "atom-fuzzy-grep": {}
   "git-blame": {}
-".jade.source":
-  editor:
-    softWrapHangingIndent: 4
+  "markdown-writer": {}
+  "merge-conflicts": {}
