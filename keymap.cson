@@ -33,6 +33,8 @@
   'ctrl-up': 'unset!'
   'ctrl-down': 'unset!'
   'ctrl-,': 'settings-view:open'
+  'ctrl-alt-,': 'linter:lint'
+  'ctrl-alt-.': 'linter:togglePanel'
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-alt-a': 'unset!'
@@ -41,5 +43,14 @@
   'ctrl-alt-l': 'grammar-selector:show'
   'ctrl-alt-c': 'unset!'
 
+# Stop emmet from hijacking tab from snippets and autocomplete
 'atom-text-editor.autocomplete-active:not([mini])':
   'tab': 'autocomplete-plus:confirm'
+
+# Stop emmet from hijacking tab from snippet tab stops
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini])':
+  'tab': 'snippets:next-tab-stop'
+
+# Stop atom from hijacking ctrl-e from emmet
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+  'ctrl-e': 'emmet:expand-abbreviation'

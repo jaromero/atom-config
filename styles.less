@@ -9,7 +9,7 @@
  */
 
 @base-font-size: 11px;
-@ui-font-family: Helvetica;
+@ui-font-family: Roboto;
 
 html, body {
   // Base font override
@@ -18,7 +18,12 @@ html, body {
 
 .platform-linux atom-workspace {
   // Fix fonts too thin in Linux
-  -webkit-text-stroke-width: 0.4px !important;
+  -webkit-text-stroke-width: 0.06ex !important;
+  text-rendering: optimizeSpeed;
+
+  // Ligature support
+  // -webkit-font-smoothing: subpixel-antialiased;
+  // -webkit-font-feature-settings: "liga" on, "calt" on;
 
   // Font overrides
   font-size: @base-font-size;
@@ -34,7 +39,7 @@ html, body {
 }
 
 .tooltip {
-  font-family: @ui-font-family;
+  // font-family: @ui-font-family;
 }
 
 atom-text-editor::shadow {
@@ -49,11 +54,23 @@ atom-text-editor::shadow {
 
   // Fading cursor
   .cursor { transition: opacity 0.2s ease; }
+
+  // Disable ligatures for current line
+  // .cursor-line {
+  //   -webkit-font-feature-settings: "liga" off, "calt" off;
+  // }
 }
 
 // Fix tab icon vertical alignment
-atom-pane .tab-bar .tab .title[data-path]::before {
-  vertical-align: middle;
+atom-pane .tab-bar .tab .title[data-path] {
+  top: 0;
+  text-align: center;
+
+  &::before {
+    top: auto;
+    left: auto;
+    vertical-align: middle;
+  }
 }
 
 // Isotope UI customization
@@ -64,4 +81,15 @@ atom-pane .tab-bar .tab .title[data-path]::before {
 // One Dark UI customization
 .theme-one-dark-ui {
   font-size: 10px;
+}
+
+// Indent guide improved
+.indent-guide-improved {
+  background-color: #222;
+  &.indent-guide-stack {
+    background-color: #333;
+    &.indent-guide-active {
+      background-color: #888;
+    }
+  }
 }
