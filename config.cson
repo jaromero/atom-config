@@ -42,7 +42,7 @@
       ".tmp"
     ]
     autoHideMenuBar: true
-    projectHome: "/home/nsdragon/Development"
+    projectHome: "/Users/antonio/Dev"
     themes: [
       "atom-material-ui"
       "seti-syntax"
@@ -126,7 +126,7 @@
   "markdown-writer": {}
   "merge-conflicts": {}
   "linter-scss-lint":
-    executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
+    executablePath: "/Users/antonio/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
   linter:
     lintOnFly: false
     statusIconScope: "File"
@@ -136,7 +136,7 @@
   "linter-eslint":
     useGlobalEslint: true
     disableWhenNoEslintrcFileInPath: true
-    globalNodePath: "/home/nsdragon/.nvm/versions/io.js/v2.5.0"
+    globalNodePath: "/Users/antonio/.nvm/versions/io.js/v2.5.0"
   "highlight-line":
     enableBackgroundColor: false
   "git-plus": {}
