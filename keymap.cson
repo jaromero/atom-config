@@ -43,6 +43,9 @@
   'ctrl-alt-l': 'grammar-selector:show'
   'ctrl-alt-c': 'unset!'
 
+# '.platform-darwin atom-text-editor':
+  # 'alt-cmd-l': 'grammar-selector:show'
+
 # Stop emmet from hijacking tab from snippets and autocomplete
 'atom-text-editor.autocomplete-active:not([mini])':
   'tab': 'autocomplete-plus:confirm'

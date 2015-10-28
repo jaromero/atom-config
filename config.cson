@@ -16,8 +16,8 @@
     softWrapAtPreferredLineLength: true
     lineHeight: 1.2
     backUpBeforeSaving: true
-    fontSize: 15
     fontFamily: "Fira Mono"
+    fontSize: 11
   core:
     disabledPackages: [
       "spell-check"
@@ -30,6 +30,7 @@
       "fonts"
       "tree-view-open-files"
       "linter-jscs"
+      "php-twig"
     ]
     ignoredNames: [
       ".git"
@@ -126,7 +127,7 @@
   "markdown-writer": {}
   "merge-conflicts": {}
   "linter-scss-lint":
-    executablePath: "/Users/antonio/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
+    executablePath: "/Users/antonio/.rvm/gems/ruby-2.2.3/wrappers/scss-lint"
   linter:
     lintOnFly: false
     statusIconScope: "File"
@@ -152,10 +153,11 @@
   autoprefixer: {}
   "opened-files": {}
   "tree-view-open-files": {}
-".diff.source":
-  editor:
-    softWrapHangingIndent: 4
+  "tree-view": {}
 ".jade.source":
   whitespace:
     removeTrailingWhitespace: false
     ignoreWhitespaceOnCurrentLine: true
+".diff.source":
+  editor:
+    softWrapHangingIndent: 4
