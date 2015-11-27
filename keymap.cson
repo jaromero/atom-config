@@ -25,7 +25,7 @@
   'ctrl-pagedown': 'pane:show-next-item'
   'ctrl-pageup': 'pane:show-previous-item'
   'ctrl-s': 'core:save'
-  'ctrl-alt-s': 'user:save-all-modified'
+  'ctrl-alt-s': 'window:save-all'
 
 'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-shift-up': 'editor:move-line-up'
