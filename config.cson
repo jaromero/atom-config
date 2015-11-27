@@ -16,8 +16,8 @@
     softWrapAtPreferredLineLength: true
     lineHeight: 1.2
     backUpBeforeSaving: true
-    fontSize: 15
     fontFamily: "Fira Mono"
+    fontSize: 15
   core:
     disabledPackages: [
       "spell-check"
@@ -30,6 +30,7 @@
       "fonts"
       "tree-view-open-files"
       "linter-jscs"
+      "git-blame"
     ]
     ignoredNames: [
       ".git"
@@ -45,7 +46,10 @@
     projectHome: "/home/nsdragon/Development"
     themes: [
       "atom-material-ui"
-      "seti-syntax"
+      "monokai-seti"
+    ]
+    packagesWithKeymapsDisabled: [
+      "emmet"
     ]
   "git-diff":
     showIconsInEditorGutter: true
@@ -141,14 +145,21 @@
     enableBackgroundColor: false
   "git-plus": {}
   "atom-material-ui":
-    slimScrollbar: true
+    slimScrollbar: false
     depth: true
     compactTreeView: true
-    showTabIcons: "Show on all tabs"
-    themeSyle: "Darker"
     panelContrast: true
-    tabSize: "Small"
     accentColor: "Cyan"
+    tabs:
+      tabSize: "Small"
+      showTabIcons: "Show on all tabs"
+    fonts: {}
+    treeView:
+      compactTreeView: true
+    panels:
+      depth: true
+    ui:
+      slimScrollbar: true
   autoprefixer: {}
   "opened-files": {}
   "tree-view-open-files": {}
