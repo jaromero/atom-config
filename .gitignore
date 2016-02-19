@@ -8,3 +8,4 @@ storage
 nohup.out
 atom-shell
 electron
+blob-store
