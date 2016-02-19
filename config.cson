@@ -1,24 +1,43 @@
 "*":
-  "exception-reporting":
-    userId: "39b24e7e-91ae-8dea-5a76-598883ed3eec"
-  welcome:
-    showOnStartup: false
-  metrics: false
-  editor:
-    softWrap: true
-    scrollPastEnd: true
-    invisibles:
-      tab: "→"
-      eol: "$"
-    useHardwareAcceleration: true
-    softWrapHangingIndent: 4
-    fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    softWrapAtPreferredLineLength: true
-    lineHeight: 1.2
-    backUpBeforeSaving: true
-    fontFamily: "Fira Mono"
-    fontSize: 15
+  aligner:
+    ":":
+      alignment: "left"
+      leftSpace: false
+  "aligner-css": {}
+  "aligner-scss": {}
+  "atom-alignment":
+    addSpacePostfix: true
+  "atom-beautify":
+    _analyticsUserId: "7df57478-dfe5-4ace-b2d7-7a2715acafcd"
+    beautifyEntireFileOnSave: false
+  "atom-color-highlight": {}
+  "atom-fuzzy-grep": {}
+  "atom-material-ui":
+    colors:
+      abaseColor: {}
+      accentColor: {}
+    fonts: {}
+    panels:
+      depth: true
+      panelContrast: true
+    tabs:
+      rippleAccentColor: true
+      showTabIcons: "Show on all tabs"
+      tabSize: "Small"
+    treeView:
+      compactList: true
+      compactTreeView: true
+    ui:
+      animations: false
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: false
+    confirmCompletion: "tab"
+    enableBuiltinProvider: false
+    suggestionListFollows: "Word"
+  autoprefixer: {}
+  "coffee-compile": {}
   core:
+    autoHideMenuBar: true
     disabledPackages: [
       "spell-check"
       "welcome"
@@ -26,11 +45,11 @@
       "Sublime-Style-Column-Selection"
       "atom-save-all"
       "gutter-shadow"
-      "atom-beautify"
       "fonts"
       "tree-view-open-files"
       "linter-jscs"
-      "git-blame"
+      "php-twig"
+      "linter-jshint"
     ]
     ignoredNames: [
       ".git"
@@ -42,131 +61,116 @@
       ".sass-cache"
       ".tmp"
     ]
-    autoHideMenuBar: true
-    projectHome: "/home/nsdragon/Development"
-    themes: [
-      "atom-material-ui"
-      "monokai-seti"
-    ]
     packagesWithKeymapsDisabled: [
       "emmet"
     ]
-  "git-diff":
-    showIconsInEditorGutter: true
-  "recent-files":
-    updated: false
-  emmet: {}
-  "open-recent":
-    maxRecentDirectories: 10
-    maxRecentFiles: 10
-  minimap:
-    plugins:
-      "color-highlight": true
-      linter: true
-      bookmarks: true
-      selection: true
-      "highlight-selected": true
-      "git-diff": true
-  "atom-alignment":
-    addSpacePostfix: true
-  "atom-color-highlight": {}
-  "project-palette-finder": {}
-  "autocomplete-plus":
-    suggestionListFollows: "Word"
-    backspaceTriggersAutocomplete: false
-    confirmCompletion: "tab"
-    enableBuiltinProvider: false
-  aligner:
-    ":":
-      alignment: "left"
-      leftSpace: false
-  "unity-ui":
-    showIcons: true
-    colorStatusIndicatorsInTreeView: true
-  "isotope-ui":
-    customBackgroundColorPicker:
-      red: 45
-      green: 45
-      blue: 45
-      alpha: 1
-    backgroundColor: "false"
-    fontWeight: "Regular"
-    backgroundImage: true
-    backgroundImagePath: "/home/nsdragon/Pictures/Wallpapers/wallbase/wallpaper_185596078.png"
-    fontFamily: "Roboto"
-  tabs:
-    usePreviewTabs: true
-  "aligner-css": {}
-  "coffee-compile": {}
-  "aligner-scss": {}
-  "isotope-light-ui":
-    fontWeight: "Regular"
-    fontFamily: "System Default"
-    customBackgroundColor: "false"
-    lowContrastTooltip: true
-  pigments:
-    ignoredNames: [
-      ".atom/packages/*"
+    projectHome: "/home/nsdragon/Development"
+    themes: [
+      "nucleus-dark-ui"
+      "an-old-hope-syntax"
     ]
-  "atom-beautify":
-    beautifyEntireFileOnSave: false
-  "one-dark-ui": {}
+  "ctags-status": {}
+  docblockr: {}
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Fira Mono"
+    fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
+    fontSize: 15
+    invisibles:
+      eol: "$"
+      tab: "→"
+    lineHeight: 1.2
+    scrollPastEnd: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 4
+    useHardwareAcceleration: true
+  emmet: {}
+  "exception-reporting":
+    userId: "39b24e7e-91ae-8dea-5a76-598883ed3eec"
   "file-icons":
     onChanges: true
   fonts:
     fontFamily: "Fira Mono"
   "fuzzy-finder": {}
-  "markdown-preview":
-    useGitHubStyle: true
-  "status-bar": {}
-  "linter-jscs":
-    preset: "google"
-    onlyConfig: true
-  "linter-jshint":
-    disableWhenNoJshintrcFileInPath: true
-  docblockr: {}
-  "atom-fuzzy-grep": {}
-  "git-blame": {}
-  "markdown-writer": {}
-  "merge-conflicts": {}
-  "linter-scss-lint":
-    executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
-  linter:
-    lintOnFly: false
-    statusIconScope: "File"
-    showErrorTabLine: true
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  "linter-eslint":
-    useGlobalEslint: true
-    disableWhenNoEslintrcFileInPath: true
-    globalNodePath: "/home/nsdragon/.nvm/versions/io.js/v2.5.0"
+  "git-blame":
+    dateFormatString: "YY-MM-DD"
+    showOnlyLastNames: false
+  "git-diff":
+    showIconsInEditorGutter: true
+  "git-plus": {}
   "highlight-line":
     enableBackgroundColor: false
-  "git-plus": {}
-  "atom-material-ui":
-    slimScrollbar: false
-    depth: true
-    compactTreeView: true
-    panelContrast: true
-    accentColor: "Cyan"
-    tabs:
-      tabSize: "Small"
-      showTabIcons: "Show on all tabs"
-    fonts: {}
-    treeView:
-      compactTreeView: true
-    panels:
-      depth: true
-    ui:
-      slimScrollbar: true
-  autoprefixer: {}
+  "isotope-light-ui":
+    customBackgroundColor: false
+    fontFamily: "System Default"
+    fontWeight: "Regular"
+    lowContrastTooltip: true
+  "isotope-ui":
+    backgroundColor: "false"
+    backgroundImage: true
+    backgroundImagePath: "/home/nsdragon/Pictures/Wallpapers/wallbase/wallpaper_185596078.png"
+    customBackgroundColorPicker:
+      alpha: 1
+      blue: 45
+      green: 45
+      red: 45
+    fontFamily: "Roboto"
+    fontWeight: "Regular"
+  linter:
+    lintOnFly: false
+    showErrorTabLine: true
+    statusIconScope: "File"
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+    globalNodePath: "/home/nsdragon/.nvm/current"
+  "linter-jscs":
+    onlyConfig: true
+    preset: "google"
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "linter-scss-lint":
+    executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-writer": {}
+  "merge-conflicts": {}
+  metrics: false
+  minimap:
+    plugins:
+      bookmarks: true
+      "color-highlight": true
+      "git-diff": true
+      "highlight-selected": true
+      linter: true
+      selection: true
+  "one-dark-ui": {}
+  "open-recent":
+    maxRecentDirectories: 10
+    maxRecentFiles: 10
   "opened-files": {}
+  pigments:
+    ignoredNames: [
+      ".atom/packages/*"
+    ]
+  "project-palette-finder": {}
+  "recent-files":
+    updated: false
+  "status-bar": {}
+  tabs:
+    usePreviewTabs: true
   "tree-view-open-files": {}
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+    showIcons: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
 ".diff.source":
   editor:
     softWrapHangingIndent: 4
 ".jade.source":
   whitespace:
-    removeTrailingWhitespace: false
     ignoreWhitespaceOnCurrentLine: true
+    removeTrailingWhitespace: false
