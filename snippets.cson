@@ -16,9 +16,10 @@
 '.source.scss':
   'HDPI media query':
     'prefix': 'hdpi'
-    'body': '@media screen and (-webkit-min-device-pixel-ratio: 1.5),\n
-    									(min--moz-device-pixel-ratio: 1.5),\n
-    									(min-resolution: 1.5dppx),\n
-    									(min-resolution: 144dpi) {\n
-      $1\n
-    }'
+    'body': """
+      @media screen and (-webkit-min-device-pixel-ratio: 1.5),
+                			  (min--moz-device-pixel-ratio: 1.5),
+                			  (min-resolution: 1.5dppx),
+                			  (min-resolution: 144dpi) {
+        $1
+      }"""

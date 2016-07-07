@@ -8,18 +8,18 @@
  * http://www.lesscss.org
  */
 
-@base-font-size: 11px;
-@ui-font-family: Roboto;
+@base-font-size: 10px;
+@ui-font-family: 'Oxygen-Sans';
 
 html, body {
   // Base font override
   // font-size: @base-font-size;
 }
 
-.platform-linux atom-workspace {
+atom-workspace {
   // Fix fonts too thin in Linux
   -webkit-text-stroke-width: 0.06ex !important;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility !important;
 
   // Ligature support
   // -webkit-font-smoothing: subpixel-antialiased;
@@ -27,7 +27,7 @@ html, body {
 
   // Font overrides
   // font-size: @base-font-size;
-  // font-family: @ui-font-family;
+  font-family: @ui-font-family;
 
   background-tips ul li .keystroke {
     font-family: inherit;
@@ -38,8 +38,31 @@ html, body {
   }
 }
 
+atom-text-editor::shadow {
+  // .scroll-view .lines > div:first-child > div {
+  //   background-image: linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+  //                     linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+  //   background-size: 8.39063px 8.39063px;
+  //   background-position: 0 -1px;
+  // }
+
+  // Turn ligatures off for various things
+  .string.quoted, // Strings
+  .string.regexp, // Regular expressions
+  // .comment, // Comments
+  .gfm, // markdown syntax
+  .text.plain // plain text
+  {
+    -webkit-font-feature-settings: "liga" off, "calt" off;
+  }
+}
+
 .tooltip {
-  // font-family: @ui-font-family;
+  font-family: @ui-font-family;
+}
+
+.atom-typescript-tooltip.tooltip .tooltip-inner {
+  max-width: 380rem;
 }
 
 atom-text-editor::shadow {
@@ -53,43 +76,154 @@ atom-text-editor::shadow {
   }
 
   // Fading cursor
-  .cursor { transition: opacity 0.2s ease; }
+  .cursor {
+    border-left-width: 2px;
+    // left: -1px;
+    transition: opacity 0.2s ease;
+  }
 
   // Disable ligatures for current line
-  // .cursor-line {
-  //   -webkit-font-feature-settings: "liga" off, "calt" off;
-  // }
+  .cursor-line {
+    -webkit-font-feature-settings: "liga" off, "calt" off;
+  }
+
+  // Highlight line plugin
+  .line.cursor-line {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  .line.highlight-line {
+    background: rgba(255, 255, 255, 0.1) !important;
+  }
+  .line.highlight-line-multi-line-solid-bottom {
+    border-bottom-color: red;
+  }
+  .line.highlight-line-multi-line-solid-top {
+    border-top-color: red;
+  }
 }
 
-// Fix tab icon vertical alignment
-// atom-pane .tab-bar .tab .title[data-path] {
-//   top: 0;
-//   text-align: center;
+autocomplete-suggestion-list {
+  &.select-list.popover-list {
+    .suggestion-description-content,
+    .suggestion-description-more-link {
+      font-family: @ui-font-family;
+    }
+
+    .suggestion-list-scroller li.selected .word-container span {
+      color: rgba(255, 255, 255, 0.8);
+
+      &.character-match {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  .character-match {
+    color: rgba(255, 255, 255, 1);
+  }
+
+}
+
+// Isotope UI customization
+// .theme-isotope-ui {
+//   font-family: inherit !important;
+//   @isotope-tree-item-height: 22px;
 //
-//   &::before {
-//     top: auto;
-//     left: auto;
-//     vertical-align: middle;
+//   .tree-view.list-tree {
+//     li,
+//     li:not(.list-nested-item),
+//     li.list-nested-item > .list-item {
+//       margin-top: 2px;
+//       min-height: @isotope-tree-item-height;
+//       line-height: @isotope-tree-item-height - 8;
+//
+//       &:first-child {
+//         margin-top: 0;
+//       }
+//
+//       &:before {
+//         min-height: @isotope-tree-item-height;
+//         line-height: @isotope-tree-item-height;
+//         height: @isotope-tree-item-height;
+//       }
+//
+//       .icon {
+//         display: inline-block;
+//         height: @isotope-tree-item-height;
+//
+//         &:before {
+//         }
+//       }
+//     }
+//
+//     &.has-collapsable-children .list-nested-item > .list-tree > li,
+//     &.has-collapsable-children .list-nested-item > .list-group > li {
+//       padding-left: 1.3rem;
+//     }
 //   }
 // }
 
-// Isotope UI customization
-.platform-linux atom-workspace.theme-isotope-ui {
-  border-top: none;
-}
-
 // One Dark UI customization
 .theme-one-dark-ui {
-  font-size: 10px;
+  // font-size: @base-font-size + 1;
+  // font-family: @ui-font-family;
+}
+
+// Seti customization
+.theme-seti-ui {
+  // Fix tab icon vertical alignment
+  atom-pane .tab-bar .tab .title[data-path] {
+    top: 0;
+
+    &::before {
+      top: auto;
+      left: auto;
+      vertical-align: middle;
+    }
+  }
+}
+
+// Material UI customization
+.theme-atom-material-ui {
+  &.compact-tree-view .tree-view li:not(.list-nested-item),
+  &.compact-tree-view .tree-view li.list-nested-item > .list-item {
+    line-height: 1.5rem;
+  }
+
+  .tab-bar .tab .title {
+    // text-align: center;
+  }
+
+  &.has-custom-icons .tab-bar:not([data-reactid]) .tab .title[data-path]::before {
+    margin-right: 0.5rem;
+  }
+
+  // atom-typescript fix
+  .atomts-main-panel-view .btn-group {
+    height: inherit;
+
+    .btn.selected,
+    button.selected,
+    button[class].selected {
+      background-color: inherit;
+    }
+  }
+}
+
+// Nucleus Dark UI customization
+.theme-nucleus-dark-ui {
+  .list-group .selected::before,
+  .list-tree .selected::before {
+  }
 }
 
 // Indent guide improved
 .indent-guide-improved {
-  background-color: #222;
+  background-color: rgba(255, 255, 255, 0.1);
   &.indent-guide-stack {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.2);
     &.indent-guide-active {
-      background-color: #888;
+      background-color: rgba(255, 255, 255, 0.4);
     }
   }
 }

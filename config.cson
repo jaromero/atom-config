@@ -1,4 +1,8 @@
 "*":
+  _dartlang:
+    _errorsInitialized: true
+    _firstRun: true
+    _version: "0.6.12"
   aligner:
     ":":
       alignment: "left"
@@ -14,25 +18,32 @@
   "atom-fuzzy-grep": {}
   "atom-material-ui":
     colors:
-      abaseColor: {}
-      accentColor: {}
-    fonts: {}
-    panels:
-      depth: true
-      panelContrast: true
+      abaseColor:
+        alpha: 1
+        blue: 226
+        green: 148
+        red: 82
+      predefinedColor: "Red"
+    fonts:
+      fontSize: 15
     tabs:
-      rippleAccentColor: true
-      showTabIcons: "Show on all tabs"
-      tabSize: "Small"
+      compactTabs: true
     treeView:
       compactList: true
-      compactTreeView: true
     ui:
-      animations: false
+      panelContrast: true
+      panelShadows: true
+  "atom-ternjs":
+    useSnippets: true
+    useSnippetsAndFunction: true
+  "autocomplete-modules":
+    webpack: true
   "autocomplete-plus":
     backspaceTriggersAutocomplete: false
     confirmCompletion: "tab"
     enableBuiltinProvider: false
+    enableExtendedUnicodeSupport: true
+    maxVisibleSuggestions: 15
     suggestionListFollows: "Word"
   autoprefixer: {}
   "coffee-compile": {}
@@ -45,19 +56,32 @@
       "Sublime-Style-Column-Selection"
       "atom-save-all"
       "gutter-shadow"
-      "fonts"
-      "tree-view-open-files"
       "linter-jscs"
       "php-twig"
       "linter-jshint"
+      "language-coffee-script-angular"
+      "less-than-slash"
+      "ctags-status"
+      "pane-split-moves-tab"
+      "flex-tool-bar"
+      "tool-bar"
+      "atom-toolbar"
+      "emmet"
+      "dartlang"
+      "atom-beautify"
+      "synced-sidebar"
+      "polymer-snippets"
     ]
+    followSymlinks: false
     ignoredNames: [
       ".git"
       ".hg"
       ".svn"
       ".DS_STORE"
       "Thumbs.db"
+      "__MACOSX"
       "node_modules"
+      "bower_components"
       ".sass-cache"
       ".tmp"
     ]
@@ -66,23 +90,25 @@
     ]
     projectHome: "/home/nsdragon/Development"
     themes: [
-      "nucleus-dark-ui"
+      "one-dark-ui"
       "an-old-hope-syntax"
     ]
   "ctags-status": {}
-  docblockr: {}
+  dartlang:
+    sdkLocation: "/opt/dart-sdk"
+  docblockr:
+    deep_indent: true
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Fira Mono"
+    fontFamily: "Fira Code"
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    fontSize: 15
+    fontSize: 13
     invisibles:
       eol: "$"
       tab: "→"
     lineHeight: 1.2
     scrollPastEnd: true
     softWrap: true
-    softWrapAtPreferredLineLength: true
     softWrapHangingIndent: 4
     useHardwareAcceleration: true
   emmet: {}
@@ -90,9 +116,18 @@
     userId: "39b24e7e-91ae-8dea-5a76-598883ed3eec"
   "file-icons":
     onChanges: true
+  "find-and-replace": {}
   fonts:
-    fontFamily: "Fira Mono"
+    fontFamily: "FiraCode"
+    preview: "The Quick brown fox { 0 !== \"O\" } iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
   "fuzzy-finder": {}
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
+    treeView:
+      toggleHovers: false
   "git-blame":
     dateFormatString: "YY-MM-DD"
     showOnlyLastNames: false
@@ -112,24 +147,28 @@
     backgroundImagePath: "/home/nsdragon/Pictures/Wallpapers/wallbase/wallpaper_185596078.png"
     customBackgroundColorPicker:
       alpha: 1
-      blue: 45
-      green: 45
-      red: 45
-    fontFamily: "Roboto"
-    fontWeight: "Regular"
+      blue: 63
+      green: 52
+      red: 47
+    fontFamily: "Oxygen"
+    fontWeight: "Light"
+  "less-than-slash": {}
   linter:
+    gutterPosition: "Left"
     lintOnFly: false
     showErrorTabLine: true
     statusIconScope: "File"
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
     globalNodePath: "/home/nsdragon/.nvm/current"
+    lintHtmlFiles: true
   "linter-jscs":
     onlyConfig: true
     preset: "google"
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
     executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
   "markdown-preview":
     useGitHubStyle: true
@@ -139,26 +178,46 @@
   minimap:
     plugins:
       bookmarks: true
+      bookmarksDecorationsZIndex: 0
       "color-highlight": true
       "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
       linter: true
+      linterDecorationsZIndex: 0
       selection: true
-  "one-dark-ui": {}
+      selectionDecorationsZIndex: 0
+  "one-dark-ui":
+    layoutMode: "Compact"
+    tabSizing: "Even"
   "open-recent":
     maxRecentDirectories: 10
     maxRecentFiles: 10
   "opened-files": {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   pigments:
     ignoredNames: [
       ".atom/packages/*"
     ]
   "project-palette-finder": {}
+  react:
+    disableAutoClose: true
   "recent-files":
     updated: false
+  "seti-ui":
+    compactView: true
+    themeColor: "Steel"
   "status-bar": {}
   tabs:
+    enableVcsColoring: true
     usePreviewTabs: true
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "tree-view": {}
   "tree-view-open-files": {}
   "unity-ui":
     colorStatusIndicatorsInTreeView: true
@@ -167,10 +226,54 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".angular.html.text":
+  editor:
+    softWrapHangingIndent: 4
+".coffee.jsx.source":
+  editor:
+    softWrapHangingIndent: 4
+".coffee.source":
+  editor:
+    softWrapHangingIndent: 4
+".css.scss.source":
+  editor:
+    softWrapHangingIndent: 4
+".dart.source":
+  editor:
+    softWrapHangingIndent: 4
 ".diff.source":
   editor:
     softWrapHangingIndent: 4
+".ini.source":
+  editor:
+    softWrapHangingIndent: 4
 ".jade.source":
+  editor:
+    softWrapHangingIndent: 4
   whitespace:
     ignoreWhitespaceOnCurrentLine: true
     removeTrailingWhitespace: false
+".js.jsx.source":
+  editor:
+    softWrapHangingIndent: 4
+".js.regexp.replacement.source":
+  editor:
+    softWrapHangingIndent: 4
+".js.regexp.source":
+  editor:
+    softWrapHangingIndent: 4
+".js.source":
+  editor:
+    softWrapHangingIndent: 4
+".litcoffee.source":
+  editor:
+    softWrapHangingIndent: 4
+".plain.text":
+  editor:
+    softWrapHangingIndent: 4
+".sass.source":
+  editor:
+    softWrapHangingIndent: 4
+".source.yaml-ext":
+  editor:
+    softWrapHangingIndent: 4

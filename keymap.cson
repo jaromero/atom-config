@@ -22,10 +22,12 @@
   'ctrl-shift-up': 'unset!'
 
 'body':
-  'ctrl-pagedown': 'pane:show-next-item'
-  'ctrl-pageup': 'pane:show-previous-item'
   'ctrl-s': 'core:save'
   'ctrl-alt-s': 'window:save-all'
+  # 'ctrl-tab ^ctrl': 'unset!'
+  # 'ctrl-tab': 'pane:show-next-item'
+  # 'ctrl-shift-tab ^ctrl': 'unset!'
+  # 'ctrl-shift-tab': 'pane:show-previous-item'
 
 'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-shift-up': 'editor:move-line-up'
@@ -35,6 +37,10 @@
   'ctrl-,': 'settings-view:open'
   'ctrl-alt-,': 'linter:lint'
   'ctrl-alt-.': 'linter:togglePanel'
+
+'atom-workspace atom-text-editor':
+  'home': 'user:smart-home'
+  'end': 'user:smart-end'
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-alt-a': 'unset!'
@@ -49,8 +55,13 @@
 
 # Stop emmet from hijacking tab from snippet tab stops
 'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini])':
-  'tab': 'snippets:next-tab-stop'
+  'tab': 'docblockr:parse-tab'
 
 # Stop atom from hijacking ctrl-e from emmet
 '.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
   'ctrl-e': 'emmet:expand-abbreviation'
+
+'atom-text-editor[data-grammar~="html"]:not([mini])':
+  # Close html tags
+  'alt-.': 'bracket-matcher:close-tag'
+  'alt-/': 'bracket-matcher:close-tag'
