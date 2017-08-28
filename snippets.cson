@@ -23,3 +23,60 @@
                 			  (min-resolution: 144dpi) {
         $1
       }"""
+
+'.text.html.angular':
+  'ngMessages':
+    'prefix': 'ngmsg'
+    'body': """
+    <div ng-messages="$1.$error">
+      <div ng-message="$2">$3</div>
+    </div>"""
+
+'.text.vue':
+  'component':
+    'prefix': 'comp'
+    'body': """
+      <template>
+      </template>
+
+      <script>
+      export default {
+        name: '$1',
+        props: [$2],
+        data() {$3},
+        computed: {$4},
+        methods: {$5},
+      }
+      </script>
+
+      <style>
+      </style>
+    """
+
+'.source.jsx':
+  'component':
+    'prefix': 'comp'
+    'body': """
+      import React, {Component} from 'react';
+
+      export default class ${1:Comp} extends Component {
+        render() {
+          return (
+            ${2:<div>Comp</div>}
+          );
+        }
+      }
+
+    """
+  'functional-component':
+    'prefix': 'comp-func'
+    'body': """
+      import React from 'react';
+
+      export default function ${1:Func}(props) {
+        return (
+          ${2:<div>Func</div>}
+        );
+      }
+
+    """

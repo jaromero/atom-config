@@ -4,12 +4,32 @@
 
 [
   {
-    type: "button"
-    icon: "gear"
-    callback: "flex-tool-bar:edit-config-file"
-    tooltip: "Edit Tool Bar"
+    type: 'button'
+    icon: 'file-tree'
+    iconset: 'mdi'
+    callback: 'tree-view:toggle'
+    tooltip: 'Toggle tree view'
   }
+  { type: 'spacer' }
   {
-    type: "spacer"
+    type: 'button'
+    icon: 'broom'
+    iconset: 'mdi'
+    callback: 'linter:lint'
+    tooltip: 'Lint current file'
+  }
+  { type: 'spacer' }
+  {
+    type: 'button'
+    icon: 'diff'
+    callback: 'git-plus:diff'
+    tooltip: 'Git diff current file'
+  }
+  { type: 'spacer' }
+  {
+    type: 'button'
+    icon: 'gear'
+    callback: 'flex-tool-bar:edit-config-file'
+    tooltip: 'Edit toolbar'
   }
 ]

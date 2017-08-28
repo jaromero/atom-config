@@ -1,8 +1,18 @@
 "*":
+  Zen:
+    showWordCount: "Right"
+    width: 120
   _dartlang:
     _errorsInitialized: true
     _firstRun: true
     _version: "0.6.12"
+  "activate-power-mode":
+    autoToggle: false
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    defaultInputValue: "Project root"
+    fuzzyMatch: true
   aligner:
     ":":
       alignment: "left"
@@ -12,27 +22,28 @@
   "atom-alignment":
     addSpacePostfix: true
   "atom-beautify":
-    _analyticsUserId: "7df57478-dfe5-4ace-b2d7-7a2715acafcd"
-    beautifyEntireFileOnSave: false
+    general:
+      _analyticsUserId: "7df57478-dfe5-4ace-b2d7-7a2715acafcd"
+      beautifyEntireFileOnSave: false
   "atom-color-highlight": {}
   "atom-fuzzy-grep": {}
   "atom-material-ui":
     colors:
-      abaseColor:
-        alpha: 1
-        blue: 226
-        green: 148
-        red: 82
-      predefinedColor: "Red"
+      abaseColor: "#455a64"
+      accentColor: "#ff4081"
     fonts:
       fontSize: 15
     tabs:
       compactTabs: true
+      tintedTabBar: true
     treeView:
+      blendTabs: true
       compactList: true
     ui:
       panelContrast: true
       panelShadows: true
+  "atom-package-deps":
+    ignored: []
   "atom-ternjs":
     useSnippets: true
     useSnippetsAndFunction: true
@@ -56,21 +67,30 @@
       "Sublime-Style-Column-Selection"
       "atom-save-all"
       "gutter-shadow"
-      "linter-jscs"
       "php-twig"
-      "linter-jshint"
       "language-coffee-script-angular"
       "less-than-slash"
       "ctags-status"
       "pane-split-moves-tab"
-      "flex-tool-bar"
-      "tool-bar"
       "atom-toolbar"
       "emmet"
       "dartlang"
-      "atom-beautify"
       "synced-sidebar"
       "polymer-snippets"
+      "autocomplete-haskell"
+      "haskell-ghc-mod"
+      "language-haskell"
+      "indent-guide-improved"
+      "whitespace"
+      "minimap-highlight-selected"
+      "fonts"
+      "atom-polymer"
+      "atom-typescript"
+      "blame"
+      "linter-csslint"
+      "language-babel"
+      "linter-coffeelint"
+      "wrap-guide"
     ]
     followSymlinks: false
     ignoredNames: [
@@ -89,9 +109,10 @@
       "emmet"
     ]
     projectHome: "/home/nsdragon/Development"
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "an-old-hope-syntax"
+      "pure-syntax"
     ]
   "ctags-status": {}
   dartlang:
@@ -102,15 +123,15 @@
     backUpBeforeSaving: true
     fontFamily: "Fira Code"
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    fontSize: 13
+    fontSize: 16
     invisibles:
       eol: "$"
       tab: "→"
-    lineHeight: 1.2
+    lineHeight: 1.3
     scrollPastEnd: true
+    showIndentGuide: true
     softWrap: true
     softWrapHangingIndent: 4
-    useHardwareAcceleration: true
   emmet: {}
   "exception-reporting":
     userId: "39b24e7e-91ae-8dea-5a76-598883ed3eec"
@@ -118,8 +139,8 @@
     onChanges: true
   "find-and-replace": {}
   fonts:
-    fontFamily: "FiraCode"
-    preview: "The Quick brown fox { 0 !== \"O\" } iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
+    fontFamily: "Source Code Pro Medium"
+    preview: "The Quick brown fox { 0 !== \"O\" } iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___ => >="
   "fuzzy-finder": {}
   "genesis-ui":
     distractionFree:
@@ -133,45 +154,46 @@
     showOnlyLastNames: false
   "git-diff":
     showIconsInEditorGutter: true
-  "git-plus": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "74ba6d92-f1ab-445e-84ae-67187992b6a9"
+  "gruvbox-plus-syntax": {}
   "highlight-line":
     enableBackgroundColor: false
-  "isotope-light-ui":
-    customBackgroundColor: false
-    fontFamily: "System Default"
-    fontWeight: "Regular"
-    lowContrastTooltip: true
   "isotope-ui":
-    backgroundColor: "false"
     backgroundImage: true
     backgroundImagePath: "/home/nsdragon/Pictures/Wallpapers/wallbase/wallpaper_185596078.png"
-    customBackgroundColorPicker:
-      alpha: 1
-      blue: 63
-      green: 52
-      red: 47
-    fontFamily: "Oxygen"
-    fontWeight: "Light"
-  "less-than-slash": {}
-  linter:
-    gutterPosition: "Left"
-    lintOnFly: false
-    showErrorTabLine: true
-    statusIconScope: "File"
+    fontFamily: "Clear Sans"
+    minimalMode: true
+  "language-babel":
+    autoIndentJSX: true
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
-    globalNodePath: "/home/nsdragon/.nvm/current"
     lintHtmlFiles: true
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
+    ]
   "linter-jscs":
     onlyConfig: true
     preset: "google"
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-sass-lint":
+    noConfigDisable: true
   "linter-scss-lint":
     disableWhenNoConfigFileInPath: true
     executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
-  "markdown-preview":
-    useGitHubStyle: true
+  "linter-ui-default":
+    panelHeight: 69
+    showProviderName: true
+    tooltipFollows: "Keyboard"
+  "markdown-preview": {}
   "markdown-writer": {}
   "merge-conflicts": {}
   metrics: false
@@ -188,12 +210,17 @@
       linterDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "nebula-ui":
+    focusMode: false
+  "nord-atom-ui":
+    darkerFormFocusEffect: true
   "one-dark-ui":
-    layoutMode: "Compact"
+    fontSize: 12
     tabSizing: "Even"
   "open-recent":
     maxRecentDirectories: 10
     maxRecentFiles: 10
+  "open-vim": {}
   "opened-files": {}
   "package-sync":
     createOnChange: true
@@ -202,19 +229,36 @@
     ignoredNames: [
       ".atom/packages/*"
     ]
+  "pristine-ui":
+    tabSizing: "Even"
   "project-palette-finder": {}
   react:
     disableAutoClose: true
   "recent-files":
     updated: false
+  "seti-syntax":
+    dynamicColor: false
+    themeColor: "Steel"
   "seti-ui":
     compactView: true
-    themeColor: "Steel"
-  "status-bar": {}
+    fileIcons: false
+    font: "Default Atom Font"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "status-bar":
+    fullWidth: false
   tabs:
     enableVcsColoring: true
     usePreviewTabs: true
+  "terminal-plus":
+    style: {}
   "tool-bar":
+    fullWidth: false
+    iconSize: "16px"
     position: "Left"
     visible: false
   "tree-view": {}
@@ -242,6 +286,9 @@
   editor:
     softWrapHangingIndent: 4
 ".diff.source":
+  editor:
+    softWrapHangingIndent: 4
+".html.js.text":
   editor:
     softWrapHangingIndent: 4
 ".ini.source":
@@ -275,5 +322,8 @@
   editor:
     softWrapHangingIndent: 4
 ".source.yaml-ext":
+  editor:
+    softWrapHangingIndent: 4
+".text.todo":
   editor:
     softWrapHangingIndent: 4

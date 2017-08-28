@@ -13,15 +13,11 @@
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
 
+# UI for An Old Hope
+# document.body.classList.add 'an-old-hope-modify-ui'
+
 # Custom commands
 atom.commands.add 'atom-text-editor',
-  # Save all command (obsolete)
-  # 'user:save-all-modified': ->
-  #   for paneItem in atom.workspace.getPaneItems()
-  #     if paneItem.getURI?()? and paneItem.isModified?()
-  #       paneItem.save()
-  # ,
-
   # Smart home/end
   # Check the current editor line and cursor position.
 
@@ -39,7 +35,8 @@ atom.commands.add 'atom-text-editor',
       screenLine = editor.lineTextForScreenRow screenPos.row
 
       # Get screen line start
-      screenLineStart = editor.clipScreenPosition [screenPos.row, 0], skipSoftWrapIndentation: true
+      screenLineStart = editor.clipScreenPosition [screenPos.row, 0],
+        skipSoftWrapIndentation: true
 
       # Check to see if we're on the first pseudo-line
       if bufferLine.startsWith screenLine
@@ -67,7 +64,8 @@ atom.commands.add 'atom-text-editor',
       screenLine = editor.lineTextForScreenRow screenPos.row
 
       # Get screen line end
-      screenLineEnd = editor.clipScreenPosition [screenPos.row, Infinity], skipSoftWrapIndentation: true
+      screenLineEnd = editor.clipScreenPosition [screenPos.row, Infinity],
+        skipSoftWrapIndentation: true
 
       if screenPos.column isnt screenLineEnd.column
         # Go to the start of the screen line

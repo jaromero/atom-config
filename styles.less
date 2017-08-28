@@ -8,8 +8,8 @@
  * http://www.lesscss.org
  */
 
-@base-font-size: 10px;
-@ui-font-family: 'Oxygen-Sans';
+@base-font-size: 13px;
+@ui-font-family: 'Helvetica';
 
 html, body {
   // Base font override
@@ -18,7 +18,7 @@ html, body {
 
 atom-workspace {
   // Fix fonts too thin in Linux
-  -webkit-text-stroke-width: 0.06ex !important;
+  // -webkit-text-stroke-width: 0.04ex !important;
   text-rendering: optimizeLegibility !important;
 
   // Ligature support
@@ -38,10 +38,14 @@ atom-workspace {
   }
 }
 
-atom-text-editor::shadow {
+atom-text-editor.editor {
+  font-weight: 500;
+  letter-spacing: -0.40px;
+  
   // .scroll-view .lines > div:first-child > div {
-  //   background-image: linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
-  //                     linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
+  //   background-image:
+  //     linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+  //     linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
   //   background-size: 8.39063px 8.39063px;
   //   background-position: 0 -1px;
   // }
@@ -55,32 +59,22 @@ atom-text-editor::shadow {
   {
     -webkit-font-feature-settings: "liga" off, "calt" off;
   }
-}
 
-.tooltip {
-  font-family: @ui-font-family;
-}
-
-.atom-typescript-tooltip.tooltip .tooltip-inner {
-  max-width: 380rem;
-}
-
-atom-text-editor::shadow {
   // Make most keywords always bold
-  .entity,
-  .function,
-  .boolean,
-  .keyword,
-  .modifier {
-    font-weight: bold !important;
+  .syntax--entity,
+  .syntax--function,
+  .syntax--boolean,
+  .syntax--keyword,
+  .syntax--modifier {
+    font-weight: bolder !important;
   }
 
   // Fading cursor
-  .cursor {
-    border-left-width: 2px;
-    // left: -1px;
-    transition: opacity 0.2s ease;
-  }
+  // .cursor {
+  //   border-left-width: 2px;
+  //   left: -1px;
+  //   transition: opacity 0.2s ease;
+  // }
 
   // Disable ligatures for current line
   .cursor-line {
@@ -100,6 +94,14 @@ atom-text-editor::shadow {
   .line.highlight-line-multi-line-solid-top {
     border-top-color: red;
   }
+}
+
+.tooltip {
+  font-family: @ui-font-family;
+}
+
+.atom-typescript-tooltip.tooltip .tooltip-inner {
+  max-width: 380rem;
 }
 
 autocomplete-suggestion-list {
@@ -125,43 +127,76 @@ autocomplete-suggestion-list {
 }
 
 // Isotope UI customization
-// .theme-isotope-ui {
-//   font-family: inherit !important;
-//   @isotope-tree-item-height: 22px;
-//
-//   .tree-view.list-tree {
-//     li,
-//     li:not(.list-nested-item),
-//     li.list-nested-item > .list-item {
-//       margin-top: 2px;
-//       min-height: @isotope-tree-item-height;
-//       line-height: @isotope-tree-item-height - 8;
-//
-//       &:first-child {
-//         margin-top: 0;
-//       }
-//
-//       &:before {
-//         min-height: @isotope-tree-item-height;
-//         line-height: @isotope-tree-item-height;
-//         height: @isotope-tree-item-height;
-//       }
-//
-//       .icon {
-//         display: inline-block;
-//         height: @isotope-tree-item-height;
-//
-//         &:before {
-//         }
-//       }
-//     }
-//
-//     &.has-collapsable-children .list-nested-item > .list-tree > li,
-//     &.has-collapsable-children .list-nested-item > .list-group > li {
-//       padding-left: 1.3rem;
-//     }
-//   }
-// }
+.theme-isotope-ui {
+  font-size: 12px;
+
+  .tree-view.list-tree {
+    li,
+    div.list-item {
+      min-height: 2rem;
+      line-height: 2rem;
+
+      span {
+        color: hsl(0, 0%, 88%) !important;
+      }
+
+      .selected {
+        &::before {
+          border-color: rgba(45, 50, 59, 0.7);
+          background-color: rgba(45, 50, 59, 0.7);
+          margin-top: -1px !important;
+          min-height: 2rem;
+          line-height: 2rem;
+        }
+
+        span {
+          color: hsl(0, 0%, 95%) !important;
+          font-weight: bold;
+        }
+      }
+    }
+
+    li.selected,
+    li:not(.list-nested-item).selected,
+    li.list-nested-item.selected > list.item {
+      &::before {
+        margin-top: 0;
+      }
+    }
+
+    li {
+      span {
+        display: block;
+
+        &::before {
+          top: 3px !important;
+        }
+      }
+    }
+
+    li.status-modified {
+      > span,
+      > .list-item span {
+        color: rgb(255, 218, 35) !important;
+
+        &::after {
+          content: ' •' !important;
+        }
+      }
+    }
+
+    li.status-added {
+      > span,
+      > .list-item span {
+        color: rgb(70, 192, 70) !important;
+      }
+    }
+  }
+
+  autocomplete-suggestion-list.select-list.popover-list * {
+    // font-size: 1.3rem !important;
+  }
+}
 
 // One Dark UI customization
 .theme-one-dark-ui {
@@ -176,8 +211,10 @@ autocomplete-suggestion-list {
     top: 0;
 
     &::before {
+      display: inline-block;
       top: auto;
       left: auto;
+      line-height: 1;
       vertical-align: middle;
     }
   }
@@ -214,6 +251,24 @@ autocomplete-suggestion-list {
 .theme-nucleus-dark-ui {
   .list-group .selected::before,
   .list-tree .selected::before {
+  }
+}
+
+// Genesis UI customization
+.theme-genesis-ui {
+  .tree-view li.file.entry {
+    height: 25px;
+    &, > span {
+      transition: none !important;
+    }
+  }
+}
+
+// Nebula UI customization
+.theme-nebula-ui {
+  .panes .pane .tab-bar {
+    padding-top: 0;
+    border-top: 0;
   }
 }
 

@@ -1,1 +1,10 @@
-{}
+[
+  {
+    title: 'nyamarks'
+    paths: [
+      '/home/nsdragon/Development/nyamarks'
+    ]
+    icon: 'icon-bookmark'
+    group: 'personal'
+  }
+]

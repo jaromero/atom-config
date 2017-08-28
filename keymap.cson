@@ -17,6 +17,8 @@
 #   'ctrl-p': 'core:move-down'
 #
 
+# coffeelint: disable=max_line_length
+
 'body .native-key-bindings':
   'ctrl-shift-down': 'unset!'
   'ctrl-shift-up': 'unset!'
@@ -37,8 +39,6 @@
   'ctrl-,': 'settings-view:open'
   'ctrl-alt-,': 'linter:lint'
   'ctrl-alt-.': 'linter:togglePanel'
-
-'atom-workspace atom-text-editor':
   'home': 'user:smart-home'
   'end': 'user:smart-end'
 
