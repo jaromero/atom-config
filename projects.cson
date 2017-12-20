@@ -1,10 +1,25 @@
 [
   {
-    title: 'nyamarks'
+    title: "🐈 nyamarks"
+    group: "personal"
     paths: [
-      '/home/nsdragon/Development/nyamarks'
+      "/home/nsdragon/Development/nyamarks"
     ]
-    icon: 'icon-bookmark'
-    group: 'personal'
+    icon: "icon-bookmark"
+  }
+  {
+    title: "⚽ smart-league"
+    group: "work"
+    paths: [
+      "/home/nsdragon/Development/vo/smart-league/webapp"
+    ]
+    icon: "icon-repo"
+  }
+  {
+    title: "HSBC Promotions"
+    group: "work"
+    paths: [
+      "/home/nsdragon/Development/vo/hsbc/promotions"
+    ]
   }
 ]

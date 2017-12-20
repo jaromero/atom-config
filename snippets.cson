@@ -33,7 +33,7 @@
     </div>"""
 
 '.text.vue':
-  'component':
+  'Component':
     'prefix': 'comp'
     'body': """
       <template>
@@ -43,18 +43,50 @@
       export default {
         name: '$1',
         props: [$2],
-        data() {$3},
+        data() {
+          return {$3};
+        },
         computed: {$4},
         methods: {$5},
-      }
+      };
       </script>
 
       <style>
       </style>
+
+    """
+  'Transition':
+    'prefix': 'transition'
+    'body': """
+      .$1-enter-active,
+      .$1-leave-active {
+        transition: opacity 0.5s;
+      }
+
+      .$1-enter,
+      .$1-leave-to {
+        opacity: 0
+      }
+    """
+
+'.source.js':
+  'Console group':
+    'prefix': 'console.group'
+    'body': """
+      console.group('$1');
+      $2
+      console.groupEnd('$1');
+    """
+  'Console group (collapsed)':
+    'prefix': 'console.groupCollapsed'
+    'body': """
+      console.groupCollapsed('$1');
+      $2
+      console.groupEnd('$1');
     """
 
 '.source.jsx':
-  'component':
+  'Component':
     'prefix': 'comp'
     'body': """
       import React, {Component} from 'react';
@@ -68,7 +100,7 @@
       }
 
     """
-  'functional-component':
+  'Component (Functional)':
     'prefix': 'comp-func'
     'body': """
       import React from 'react';

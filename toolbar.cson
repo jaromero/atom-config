@@ -1,24 +1,50 @@
-# This file is used by Flex Tool Bar to create buttons on your Tool Bar.
-# For more information how to use this package and create your own buttons,
-#   read the documentation on https://atom.io/packages/flex-tool-bar
-
 [
   {
     type: 'button'
-    icon: 'file-tree'
-    iconset: 'mdi'
+    icon: 'repo'
     callback: 'tree-view:toggle'
     tooltip: 'Toggle tree view'
   }
   { type: 'spacer' }
   {
     type: 'button'
-    icon: 'broom'
-    iconset: 'mdi'
+    icon: 'code'
+    callback: 'pane:split-right-and-copy-active-item'
+    tooltip: 'Split and clone right'
+  }
+  {
+    type: 'button'
+    icon: 'code'
+    className: 'fa-rotate-90'
+    callback: 'pane:split-down-and-copy-active-item'
+    tooltip: 'Split and clone down'
+  }
+  { type: 'spacer' }
+  {
+    type: 'button'
+    icon: 'unverified'
     callback: 'linter:lint'
     tooltip: 'Lint current file'
   }
+  {
+    type: 'button'
+    icon: 'file'
+    callback: 'minimap:toggle'
+    tooltip: 'Toggle Minimap'
+  }
+  {
+    type: 'button'
+    icon: 'list-unordered'
+    callback: 'outline-view:toggle'
+    tooltip: 'Toggle Outline view'
+  }
   { type: 'spacer' }
+  {
+    type: 'button'
+    icon: 'git-commit'
+    callback: 'github:toggle-git-tab'
+    tooltip: 'Toggle Git tab'
+  }
   {
     type: 'button'
     icon: 'diff'
@@ -28,8 +54,46 @@
   { type: 'spacer' }
   {
     type: 'button'
-    icon: 'gear'
+    icon: 'octoface'
+    callback: 'open-on-github:repository'
+    tooltip: 'Open repository on Github'
+  }
+  {
+    type: 'button'
+    icon: 'file-code'
+    callback: 'open-on-github:file'
+    tooltip: 'Open current file on Github'
+  }
+  {
+    type: 'button'
+    icon: 'flame'
+    callback: 'open-on-github:blame'
+    tooltip: 'Blame current file on Github'
+  }
+  {
+    type: 'button'
+    icon: 'git-pull-request'
+    callback: 'github:open-issue-or-pull-request'
+    tooltip: 'Open Issue or Pull Request'
+  }
+  { type: 'spacer' }
+  {
+    type: 'button'
+    icon: 'tools'
     callback: 'flex-tool-bar:edit-config-file'
     tooltip: 'Edit toolbar'
   }
+  {
+    type: 'button'
+    icon: 'settings'
+    callback: 'settings-view:open'
+    tooltip: 'Edit settings'
+  }
+  {
+    type: 'button'
+    icon: 'sync'
+    callback: 'window:reload'
+    tooltip: 'Reload window'
+  }
 ]
+

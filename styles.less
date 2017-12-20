@@ -41,14 +41,6 @@ atom-workspace {
 atom-text-editor.editor {
   font-weight: 500;
   letter-spacing: -0.40px;
-  
-  // .scroll-view .lines > div:first-child > div {
-  //   background-image:
-  //     linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
-  //     linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px);
-  //   background-size: 8.39063px 8.39063px;
-  //   background-position: 0 -1px;
-  // }
 
   // Turn ligatures off for various things
   .string.quoted, // Strings
@@ -57,7 +49,7 @@ atom-text-editor.editor {
   .gfm, // markdown syntax
   .text.plain // plain text
   {
-    -webkit-font-feature-settings: "liga" off, "calt" off;
+    font-feature-settings: "liga" off, "calt" off;
   }
 
   // Make most keywords always bold
@@ -66,7 +58,7 @@ atom-text-editor.editor {
   .syntax--boolean,
   .syntax--keyword,
   .syntax--modifier {
-    font-weight: bolder !important;
+    font-weight: 900 !important;
   }
 
   // Fading cursor
@@ -78,7 +70,7 @@ atom-text-editor.editor {
 
   // Disable ligatures for current line
   .cursor-line {
-    -webkit-font-feature-settings: "liga" off, "calt" off;
+    font-feature-settings: "liga" off, "calt" off;
   }
 
   // Highlight line plugin
@@ -126,78 +118,6 @@ autocomplete-suggestion-list {
 
 }
 
-// Isotope UI customization
-.theme-isotope-ui {
-  font-size: 12px;
-
-  .tree-view.list-tree {
-    li,
-    div.list-item {
-      min-height: 2rem;
-      line-height: 2rem;
-
-      span {
-        color: hsl(0, 0%, 88%) !important;
-      }
-
-      .selected {
-        &::before {
-          border-color: rgba(45, 50, 59, 0.7);
-          background-color: rgba(45, 50, 59, 0.7);
-          margin-top: -1px !important;
-          min-height: 2rem;
-          line-height: 2rem;
-        }
-
-        span {
-          color: hsl(0, 0%, 95%) !important;
-          font-weight: bold;
-        }
-      }
-    }
-
-    li.selected,
-    li:not(.list-nested-item).selected,
-    li.list-nested-item.selected > list.item {
-      &::before {
-        margin-top: 0;
-      }
-    }
-
-    li {
-      span {
-        display: block;
-
-        &::before {
-          top: 3px !important;
-        }
-      }
-    }
-
-    li.status-modified {
-      > span,
-      > .list-item span {
-        color: rgb(255, 218, 35) !important;
-
-        &::after {
-          content: ' •' !important;
-        }
-      }
-    }
-
-    li.status-added {
-      > span,
-      > .list-item span {
-        color: rgb(70, 192, 70) !important;
-      }
-    }
-  }
-
-  autocomplete-suggestion-list.select-list.popover-list * {
-    // font-size: 1.3rem !important;
-  }
-}
-
 // One Dark UI customization
 .theme-one-dark-ui {
   // font-size: @base-font-size + 1;
@@ -222,29 +142,29 @@ autocomplete-suggestion-list {
 
 // Material UI customization
 .theme-atom-material-ui {
-  &.compact-tree-view .tree-view li:not(.list-nested-item),
-  &.compact-tree-view .tree-view li.list-nested-item > .list-item {
-    line-height: 1.5rem;
-  }
-
-  .tab-bar .tab .title {
-    // text-align: center;
-  }
-
-  &.has-custom-icons .tab-bar:not([data-reactid]) .tab .title[data-path]::before {
-    margin-right: 0.5rem;
-  }
-
-  // atom-typescript fix
-  .atomts-main-panel-view .btn-group {
-    height: inherit;
-
-    .btn.selected,
-    button.selected,
-    button[class].selected {
-      background-color: inherit;
-    }
-  }
+  // &.compact-tree-view .tree-view li:not(.list-nested-item),
+  // &.compact-tree-view .tree-view li.list-nested-item > .list-item {
+  //   line-height: 1.5rem;
+  // }
+  // 
+  // .tab-bar .tab .title {
+  //   // text-align: center;
+  // }
+  // 
+  // &.has-custom-icons .tab-bar:not([data-reactid]) .tab .title[data-path]::before {
+  //   margin-right: 0.5rem;
+  // }
+  // 
+  // // atom-typescript fix
+  // .atomts-main-panel-view .btn-group {
+  //   height: inherit;
+  // 
+  //   .btn.selected,
+  //   button.selected,
+  //   button[class].selected {
+  //     background-color: inherit;
+  //   }
+  // }
 }
 
 // Nucleus Dark UI customization
@@ -281,4 +201,15 @@ autocomplete-suggestion-list {
       background-color: rgba(255, 255, 255, 0.4);
     }
   }
+}
+
+// Github
+.github-Panel,
+.github-HunkView-stageButton {
+  font-family: @ui-font-family;
+}
+
+.github-StubItem-git-file-patch-controller {
+  font-weight: 500;
+  letter-spacing: -0.40px;  
 }

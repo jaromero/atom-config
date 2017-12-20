@@ -41,6 +41,9 @@
   'ctrl-alt-.': 'linter:togglePanel'
   'home': 'user:smart-home'
   'end': 'user:smart-end'
+  'ctrl-k ctrl-l': 'window:toggle-invisibles'
+  'ctrl-k ctrl-i': 'nyan-indent:toggle'
+  'ctrl-k ctrl-k': 'hey-pane:toggle-focus-of-active-pane'
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-alt-a': 'unset!'
@@ -63,5 +66,7 @@
 
 'atom-text-editor[data-grammar~="html"]:not([mini])':
   # Close html tags
-  'alt-.': 'bracket-matcher:close-tag'
-  'alt-/': 'bracket-matcher:close-tag'
+  # 'alt-.': 'bracket-matcher:close-tag'
+  # 'alt-/': 'bracket-matcher:close-tag'
+  'alt-.': 'tag:close-tag'
+  'alt-/': 'tag:close-tag'
