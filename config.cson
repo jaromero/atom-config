@@ -10,7 +10,6 @@
     autoToggle: false
   "advanced-open-file":
     createDirectories: true
-    createFileInstantly: true
     defaultInputValue: "Project root"
     fuzzyMatch: true
   aligner:
@@ -30,17 +29,17 @@
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnType: false
-    "atom-ide-diagnostics-ui":
-      autoVisibility: true
-    use:
-      "atom-ide-diagnostics-ui": false
+    "atom-ide-diagnostics-ui": {}
+    "atom-ide-find-references": {}
+    use: {}
   "atom-material-ui":
     colors:
       abaseColor: "#ec407a"
       accentColor: "#46ffc1"
       predefinedColor: "Pink"
     fonts: {}
-    tabs: {}
+    tabs:
+      compactTabs: true
     treeView:
       blendTabs: false
       compactList: false
@@ -63,9 +62,10 @@
     suggestionListFollows: "Word"
   autoprefixer: {}
   "base16-syntax":
-    scheme: "Materia"
-  "bracket-matcher":
-    highlightMatchingLineNumber: true
+    matchUserInterfaceTheme: false
+    scheme: "Ashes"
+  "bracket-matcher": {}
+  "city-lights-ui": {}
   "coffee-compile": {}
   core:
     autoHideMenuBar: true
@@ -77,21 +77,16 @@
       "atom-save-all"
       "gutter-shadow"
       "php-twig"
-      "language-coffee-script-angular"
       "less-than-slash"
       "ctags-status"
       "pane-split-moves-tab"
       "atom-toolbar"
-      "emmet"
       "dartlang"
-      "synced-sidebar"
-      "polymer-snippets"
       "autocomplete-haskell"
       "haskell-ghc-mod"
       "language-haskell"
       "whitespace"
       "minimap-highlight-selected"
-      "atom-polymer"
       "atom-typescript"
       "blame"
       "linter-csslint"
@@ -102,10 +97,14 @@
       "fonts"
       "ide-vue"
       "linter-sass-lint"
-      "indent-guide-improved"
-      "react-es6-snippets"
       "react"
-      "angularjs"
+      "language-gfm"
+      "city-lights-icons"
+      "minimap-autohider"
+      "linter"
+      "linter-ui-default"
+      "minimap-linter"
+      "xatom-debug"
     ]
     followSymlinks: false
     ignoredNames: [
@@ -124,11 +123,13 @@
       "emmet"
     ]
     projectHome: "/home/nsdragon/Development"
+    restorePreviousWindowsOnStart: "no"
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "firefox-syntax"
+      "an-old-hope-syntax"
     ]
+    useTreeSitterParsers: true
   "ctags-status": {}
   dartlang:
     sdkLocation: "/opt/dart-sdk"
@@ -139,17 +140,15 @@
     deep_indent: true
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Iosevka"
+    fontFamily: "Ligalex Mono"
     fontFamilyTestString: "iIl1 o0O S5 Z2 ~ {}[]<> ,.+-= ___"
-    fontSize: 17
     invisibles:
       eol: "$"
       tab: "→"
     lineHeight: 1.3
-    preferredLineLength: 100
     scrollPastEnd: true
     scrollSensitivity: 75
-    showInvisibles: true
+    showIndentGuide: true
     softWrap: true
     softWrapHangingIndent: 4
   emmet: {}
@@ -179,8 +178,9 @@
     general:
       _analyticsUserId: "74ba6d92-f1ab-445e-84ae-67187992b6a9"
     tags: {}
+  "glacier-dark-ui": {}
   "gruvbox-plus-syntax":
-    contrast: "Hard"
+    contrast: "Soft"
   "highlight-line":
     enableBackgroundColor: false
   "ide-html":
@@ -218,16 +218,14 @@
     executablePath: "/home/nsdragon/.rvm/gems/ruby-2.2.2/wrappers/scss-lint"
   "linter-stylelint": {}
   "linter-ui-default":
-    panelHeight: 167
+    panelHeight: 190
     showProviderName: true
     tooltipFollows: "Keyboard"
   "markdown-preview":
     breakOnSingleNewline: true
   "markdown-writer": {}
   "merge-conflicts": {}
-  metrics: false
   minimap:
-    autoToggle: false
     plugins:
       bookmarks: true
       bookmarksDecorationsZIndex: 0
@@ -238,15 +236,17 @@
       "highlight-selectedDecorationsZIndex": 0
       linter: true
       linterDecorationsZIndex: 0
+      "minimap-autohider": true
+      "minimap-autohiderDecorationsZIndex": 0
       selection: true
       selectionDecorationsZIndex: 0
     useHardwareAcceleration: false
   "nebula-ui":
     focusMode: false
+    hideSingleTab: false
   "nord-atom-ui":
     darkerFormFocusEffect: true
   "nyan-indent":
-    color: "safari"
     opacity: 10
   "one-dark-ui":
     fontSize: 13
@@ -290,7 +290,9 @@
     style: {}
   "tool-bar":
     fullWidth: false
+    iconSize: "16px"
     position: "Left"
+    useTouchBar: false
   "tree-view": {}
   "tree-view-open-files": {}
   "unity-ui":
@@ -300,6 +302,8 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  "xatom-debug":
+    toolbarStyle: "BottomPanel"
 ".angular.html.text":
   editor:
     softWrapHangingIndent: 4

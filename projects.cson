@@ -22,4 +22,10 @@
       "/home/nsdragon/Development/vo/hsbc/promotions"
     ]
   }
+  {
+    title: "Club Premier: New Signup Flow"
+    paths: [
+      "/home/nsdragon/Development/vo/clubpremier/new-signup-flow"
+    ]
+  }
 ]

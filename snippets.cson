@@ -36,23 +36,28 @@
   'Component':
     'prefix': 'comp'
     'body': """
-      <template>
-      </template>
-
-      <script>
-      export default {
-        name: '$1',
-        props: [$2],
-        data() {
-          return {$3};
-        },
-        computed: {$4},
-        methods: {$5},
-      };
-      </script>
-
-      <style>
-      </style>
+			<template>
+			  <div>
+			    <h1>{{title}}</h1>
+			  </div>
+			</template>
+			
+			<script>
+			export default {
+			  name: '${1:MyComponent}',
+			  props: {${2}},
+			  data() {
+			    return {
+			      title: 'Hello world',
+			    };
+			  },
+			  computed: {${4}},
+			  methods: {${5}},
+			};
+			</script>
+			
+			<style scoped>
+			</style>
 
     """
   'Transition':

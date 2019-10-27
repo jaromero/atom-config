@@ -13,3 +13,4 @@ packages
 snapshot-cache
 split-diff
 storage
+recovery

@@ -70,3 +70,7 @@
   # 'alt-/': 'bracket-matcher:close-tag'
   'alt-.': 'tag:close-tag'
   'alt-/': 'tag:close-tag'
+
+# 'div:not(.github-CommitView-editor) atom-text-editor':
+#   'home': 'editor:move-to-first-character-of-line'
+#   'end': 'editor:move-to-end-of-screen-line'

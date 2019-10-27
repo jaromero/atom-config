@@ -28,12 +28,6 @@
   }
   {
     type: 'button'
-    icon: 'file'
-    callback: 'minimap:toggle'
-    tooltip: 'Toggle Minimap'
-  }
-  {
-    type: 'button'
     icon: 'list-unordered'
     callback: 'outline-view:toggle'
     tooltip: 'Toggle Outline view'
@@ -95,5 +89,5 @@
     callback: 'window:reload'
     tooltip: 'Reload window'
   }
+  { type: 'spacer' }
 ]
-
